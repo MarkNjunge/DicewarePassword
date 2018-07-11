@@ -26,7 +26,7 @@ def get_dict():
 
             key = line.split("\t")[0]
             value = line.split("\t")[1]
-            passes[key] = value
+            passes[key] = value.strip()
 
         pickle.dump(passes, open("passes.pickle", "wb"))
         print("Created pickle")
